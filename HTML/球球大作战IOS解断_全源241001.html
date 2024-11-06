@@ -1,0 +1,430 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ayDraw</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: lime;
+            font-size: 10px;
+            font-family: Arial, sans-serif;
+            -webkit-tap-highlight-color: #f7f8fa;
+            outline: none;
+        }
+
+.layout {
+      display: flex;
+      width: 100%;
+      --height: 100%;
+      margin-bottom: 10px;
+    }
+
+.layout2 {
+      display: none;
+      width: 100%;
+      --height: 100%;
+      margin-bottom: 10px;
+    }
+
+
+
+        *:not(input, checkbox, textarea) {
+
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+
+        }
+
+        body {
+            background: transparent;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        *:not(input, checkbox, textarea) {
+
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+
+        }
+
+        .popup_container {
+            position: absolute;
+            z-index: 1000;
+            left: 35%;   /* 居上显示*/
+            top: 5;
+        }
+
+        #H5AlertView {
+            width: 460px;
+            height: 500px;
+            position: absolute;
+            left: -110px;
+            top: 150px;
+            text-align: center;
+            zoom: 0.5;
+        }
+
+        #title-text {
+            padding-top: 0px;
+            font-size: 23px;
+            font-weight:600;
+            color: black; /*文字颜色*/
+        }
+
+        #info-text {
+            padding: 10px;
+            color: black;
+        }
+
+        #content-view {
+            z-index: 100;
+            background-image:url("https://s21.ax1x.com/2024/10/01/pA33okt.jpg") ;
+        background-size:cover;
+            position: relative;
+            top: 50px;
+            border: 1px solid black; /*边框*/
+            border-radius: 16px;
+            padding: 10px;
+        }
+
+        button {
+            width: 100%;
+            height: 40px;
+            color: black;
+            background-color: rgba(193,193,193,.38);
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            border-radius: 7px;
+            padding: 0 8px;
+            margin: 5px 0;
+            font-size: 17px;
+        }
+
+        button:active {
+            background-color: red;
+            transform: translateY(2px);
+        }
+    </style>
+</head>
+
+<body>
+
+<!--悬浮菜单--> 
+    <div id="v2" class="popup_container"> 
+      <div id="H5AlertView"> 
+<script>
+
+function atk1() {
+
+setButtonImage('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAACAvzbMAAAABmJLR0QA/wD/AP+gvaeTAAACn0lEQVR42u3OsQ2AMAADQYt1shbLM0BqZ4JIFEihuCu/+gQAvtL2bjtOfwDwX9emP0nm6TkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF5a+qQIao24iT8AAAAASUVORK5CYII=');
+
+}
+
+function atk2() {
+
+    h5gg.clearResults();
+    h5gg.searchNumber('1123', 'I32', '0x10000000', '0x160000000');
+    h5gg.searchNearby('216', 'I32', '0x4');
+    h5gg.searchNumber('1123', 'I32', '0x10000000', '0x160000000');
+    var count = h5gg.getResultsCount();
+    alert("ss=" + count);
+    var r = h5gg.getResults(count);
+    setInterval(function () {
+                    for (var i = 0; i < count; i++)
+                    {
+                        var addr5 = r[i].address;
+                        var dz = (Number(addr5) + 156);
+                        h5gg.setValue(dz, 55, "I32");
+                    }
+                }, 0);
+}
+
+function atk3() {
+
+    h5gg.clearResults();
+    h5gg.searchNumber('1123', 'I32', '0x10000000', '0x160000000');
+    h5gg.searchNearby('216', 'I32', '0x4');
+    h5gg.searchNumber('1123', 'I32', '0x10000000', '0x160000000');
+    var count = h5gg.getResultsCount();
+    alert("ss=" + count);
+    var r = h5gg.getResults(count);
+    setInterval(function () {
+                    for (var i = 0; i < count; i++)
+                    {
+                        var addr5 = r[i].address;
+                        var dz = (Number(addr5) + 156);
+                        h5gg.setValue(dz, 55, "I32");
+                    }
+                }, 35);
+}
+
+function atk4() {
+
+    h5gg.clearResults();
+    h5gg.searchNumber('1123', 'I32', '0x10000000', '0x160000000');
+    h5gg.searchNearby('216', 'I32', '0x4');
+    h5gg.searchNumber('1123', 'I32', '0x10000000', '0x160000000');
+    var count = h5gg.getResultsCount();
+    alert("ss=" + count);
+    var r = h5gg.getResults(count);
+    setInterval(function () {
+                    for (var i = 0; i < count; i++)
+                    {
+                        var addr5 = r[i].address;
+                        var dz = (Number(addr5) + 156);
+                        h5gg.setValue(dz, 55, "I32");
+                    }
+                }, 55);
+}
+
+function atk5() {
+    h5gg.clearResults();
+    h5gg.searchNumber('0.05', 'F32', '0x10000000', '0x160000000');
+    h5gg.searchNearby('262156', 'I32', '0x20');
+    h5gg.searchNumber('0.05', 'F32', '0x10000000', '0x160000000');
+    h5gg.editAll(-1, "F32");
+    alert('ss');
+}
+
+
+function atk6() {
+
+    var hk1 = prompt('sy');
+    h5gg.clearResults();
+    h5gg.searchNumber("0.01", "F32", "0x00000000", "0x200000000");
+    h5gg.searchNearby("1.5", "F32", "0x20");
+    h5gg.searchNumber("1.5", "F32", "0x00000000", "0x200000000");
+    var count = h5gg.getResultsCount();
+    alert("ss" + count);
+    var r = h5gg.getResults(count);
+    for (var i = 0; i < count; i++)
+    {
+        var addr8 = r[i].address;
+        var weishu = /4$/;
+        var pd = weishu.test(addr8);
+        if (pd)
+        {
+            h5gg.setValue(addr8, hk1, "F32");
+        }
+    }
+}
+
+function atk7() {
+
+    var hk8 = prompt('建议1.1-1.8');
+    h5gg.clearResults();
+    h5gg.searchNumber('1', 'F32', '0x100000000', '0x1600000000');
+    h5gg.searchNearby('0.33333334327', 'F32', '0x100');
+    h5gg.searchNearby('0.02999999933', 'F32', '0x100');
+    h5gg.searchNumber('1', 'F32', '0x100000000', '0x1600000000');
+    var count = h5gg.getResultsCount();
+    alert("Ss" + count);
+    var r = h5gg.getResults(count);
+    setInterval(function () {
+                    for (var i = 0; i < count; i++)
+                    {
+                        var addr8 = r[i].address;
+                        h5gg.setValue(addr8, hk8, "F32");
+                    }
+                }, 3000);
+}
+
+
+function atk8() {
+    var hk4 = prompt('0.5~1.7建议1.5');
+    h5gg.clearResults();
+    h5gg.searchNumber("0.58823525906", "F32", "0x00000000", "0x200000000");
+    h5gg.searchNearby("1.7", "F32", "0x20");
+    h5gg.searchNumber("1.7", "F32", "0x00000000", "0x200000000");
+    var count = h5gg.getResultsCount();
+    alert("ss" + count);
+    var r = h5gg.getResults(count);
+    for (var i = 0; i < count; i++)
+    {
+        var addr8 = r[i].address;
+        var weishu = /C$/;
+        var pd = weishu.test(addr8);
+        if (pd)
+        {
+            h5gg.setValue(addr8, hk4, "F32");
+        }
+    }
+}
+
+function atk9() {
+
+    h5gg.clearResults();
+    h5gg.searchNumber('0.02', 'F32', '0x10000000', '0x160000000');
+    h5gg.searchNearby('50', 'F32', '0x40');
+    h5gg.searchNearby('19502', 'I32', '0x40');
+    h5gg.searchNumber('19502', 'I32', '0x10000000', '0x160000000');
+    var count = h5gg.getResultsCount();
+    alert("ss=" + count);
+    var r = h5gg.getResults(count);
+    for (var i = 0; i < count; i++)
+    {
+        var addr5 = r[i].address;
+        var dz = (Number(addr5) + 64);
+        h5gg.setValue(dz, 0.0001, "F32");
+    }
+    
+}
+
+function atk10() {
+
+    h5gg.clearResults();
+    h5gg.searchNumber('100', 'F32', '0x10000000', '0x160000000');
+    h5gg.searchNearby('131240', 'I32', '0x40');
+    var count = h5gg.getResultsCount();
+    alert("ss=" + count);
+    var r = h5gg.getResults(count);
+    for (var i = 0; i < count; i++)
+    {
+        var addr1 = r[i].address;
+        var weishu = /C$/;
+        var pd = weishu.test(addr1);
+        if (pd)
+        {
+            h5gg.setValue(addr1, 9999999999, "F32");
+        }
+    }
+}
+
+function atk11() {
+
+    var hk1 = prompt('sy');
+    h5gg.clearResults();
+    h5gg.searchNumber("640", "F32", "0x00000000", "0x200000000");
+    h5gg.searchNearby("0.5", "F32", "0x24");
+    h5gg.searchNumber("640", "F32", "0x00000000", "0x200000000");
+    var count = h5gg.getResultsCount();
+    alert("ss=" + count);
+    var r = h5gg.getResults(count);
+    for (var i = 0; i < count; i++)
+    {
+        var addr5 = r[i].address;
+        var dz = (Number(addr5) + 8);
+        h5gg.setValue(dz, hk1, "F32");
+    }
+}
+
+
+function atk12() {
+
+    var hk3 = prompt('ss');
+    h5gg.clearResults();
+    h5gg.searchNumber("-3278106", "I32", "0x00000000", "0x200000000");
+    h5gg.searchNearby("-8880791", "I32", "0x4");
+    h5gg.searchNumber("-8880791", "I32", "0x00000000", "0x200000000");
+    var count = h5gg.getResultsCount();
+    alert("ss" + count);
+    var r = h5gg.getResults(count);
+    for (var i = 0; i < count; i++)
+    {
+        var addr8 = r[i].address;
+        var addr9 = Number(addr8) + 88;
+        h5gg.setValue(addr9, hk3, "F32");
+    }
+
+}
+
+function atk13() {
+
+    h5gg.clearResults();
+    h5gg.searchNumber('0.02', 'F32', '0x10000000', '0x160000000');
+    h5gg.searchNearby('50', 'F32', '0x40');
+    h5gg.searchNearby('19502', 'I32', '0x40');
+    h5gg.searchNumber('19502', 'I32', '0x10000000', '0x160000000');
+    var count = h5gg.getResultsCount();
+    alert("ss=" + count);
+    var r = h5gg.getResults(count);
+    for (var i = 0; i < count; i++)
+    {
+        var addr5 = r[i].address;
+        var dz = (Number(addr5) + 64);
+        h5gg.setValue(dz, 0.00001, "F32");
+    }
+    ;
+}
+
+
+</script> 
+        <div id="content-view"> 
+          <div id="title-text">
+            Tg频道@TrollStoreKios免费分享
+          </div> 
+          <div id="info-text">
+            新版粘合和双连点功能需要在练习室吐一颗球,分一次身然后等房间刷新后在开功能 
+          </div> 
+          <div id="layout1"> 
+            <!-- 布局1的内容 --> 
+            <button id="v3" onclick="atk1()">隐藏图标</button> 
+            <button id="v4" onclick="atk2()">解断1</button> 
+            <button id="v5" onclick="atk3()">解断2</button> 
+            <button id="v6" onclick="atk4()">解断3</button> 
+            <button id="v7" onclick="atk5()">双连点</button> 
+            <button id="v8" onclick="atk6()"> 平板全视野(上下左右视野都有，数值自己摸索,原始1.5) </button> 
+          </div> 
+          <div id="layout2"class="layout2"> 
+            <!-- 布局2的内容 --> 
+            <button id="v9" onclick="atk7()"> 全局加速(画面加速，增加手感) </button> 
+            <button id="v10" onclick="atk8()">新版粘合(画面加速，增加手感) </button> 
+            <button id="v11" onclick="atk9()">摇杆灵敏（摇杆更快，更丝滑）</button> 
+            <button id="v12" onclick="atk10()">摇杆解限(提高摇杆上限，提高灵活度)</button> 
+            <button id="v13" onclick="atk11()">手机全视野(上下左右视野都有,数值自己摸索) </button> 
+            <button id="v14" onclick="atk12()">左右视野</button> 
+
+             <button id="v15" onclick="atk13()">摇杆灵敏（这个必须去皮才能使用）</button>
+          </div> 
+          <div  class="layout"> 
+            <button  onclick="toggleLayout('layout1')">上一页</button> 
+            <div id="间隔">-</div> 
+            <button onclick="toggleLayout('layout2')">下一页</button> 
+          </div> 
+<script>
+function toggleLayout(layoutId) {
+    var layout1 = document.getElementById('layout1');
+    var layout2 = document.getElementById('layout2');
+    if (layoutId === 'layout1')
+    {
+        if (layout1.style.display === 'none')
+        {
+            layout1.style.display = 'block';
+            layout2.style.display = 'none';
+        }
+        else
+        {
+            layout1.style.display = 'none';
+        }
+    }
+    else
+    {
+        if (layout2.style.display === 'none')
+        {
+            layout2.style.display = 'block';
+            layout1.style.display = 'none';
+        }
+        else
+        {
+            layout2.style.display = 'none';
+        }
+    }
+}
+</script> 
+        </div> 
+      </div> 
+    </div> 
+  </body>
+</html>
