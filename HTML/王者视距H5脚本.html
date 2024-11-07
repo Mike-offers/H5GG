@@ -1,0 +1,204 @@
+<html><head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>全局视距</title>
+		<style>
+			* {
+						    margin: 0;
+						    padding: 0;
+						    color: #000;
+						    font-size: 30px;
+						    font-family: Arial, sans-serif;
+						    -webkit-tap-highlight-color: transparent;
+						    outline: none;
+						}
+						
+						body {
+						    background: transparent;
+						    position: fixed;
+						    left: 0;
+						    top: 0;
+						    width: 100%;
+						    height: 100%;
+						}
+						
+						
+						*:not(input, checkbox, textarea) {
+						
+						    -webkit-touch-callout: none;
+						    -webkit-user-select: none;
+						    user-select: none;
+						
+						}
+						
+						.popup_container {
+						    position: absolute;
+						    z-index: 1000;
+						    left: 50%;
+						    top: 0;
+						}
+						
+						#H5AlertView {
+						    width: 280px;
+						    height: 1000px;
+						    position: absolute;
+						    left: -140px;
+						    top: 100px;
+						    text-align: center;
+						    zoom: 0.8;
+						}
+						
+						#title-text {
+						    padding-top: 0px;
+						    font-size: 28px;
+						  font-weight:600;
+						    color: #494949;
+						}
+						
+						#info-text {
+						    padding: 10px;
+						    color: #494949;
+						}
+						
+						#content-view {
+						    z-index: 0;
+						    background: #fff;
+						    position: relative;
+						    top: 0px;
+						    border: 1px solid #E8E8E8;
+						    border-radius: 20px;
+						    padding: 10px;
+						}
+
+						button {
+						    width: 100%;
+						    height: 45px;
+						    color: #fff;
+						    background-color: #3a6df0;
+						    display: inline-block;
+						    cursor: pointer;
+						    text-align: center;
+						    text-decoration: none;
+						    outline: none;
+						    border: none;
+						    border-radius: 5px;
+						    padding: 0 8px;
+						    margin: 5px 0;
+						    font-size: 25px;
+						}
+
+						
+						
+						button:active {
+						    background-color: #007E40;
+						    transform: translateY(3px);
+						}
+						
+		</style>
+			</head>
+
+	<body>
+		<!--悬浮菜单-->
+		<div class="popup_container">
+			<div id="H5AlertView">
+    <div class="popup_container">
+    <div id="H5AlertView" style="overflow: scroll">
+<h6>
+<img width="150" src="https://img95.699pic.com/xsj/0c/v8/9j.jpg!/fh/300"></h6>
+             <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=Z5fbvNho-Z9cipZyvj3NVVigKN7a9ewN&authKey=2foRxzOso0BCEvYPS%2BlSyWnCXmSuMvwILbfbwKpDzZhKT9R56MqpndvhFt%2FUvvwU&noverify=0&group_code=786909292"><h1>点击加入猫猫交流群<a>
+             <div id="content-view">
+
+                            <button onclick="anniu1(32)">视距1.3</button>
+                            <button onclick="anniu1(34)">视距1.4</button>
+                            <button onclick="anniu1(36)">视距1.5</button>
+                            <button onclick="anniu1(38)">视距1.6</button>
+                            <button onclick="anniu1(40)">视距1.7</button>
+                            <button onclick="anniu1(42)">视距1.8</button>
+                            <button onclick="anniu1(44)">视距1.9</button>
+                            <button onclick="anniu1(46)">视距2.0</button>
+                            <button onclick="anniu1(30)">还原视距</button>
+                            <button onclick="anniu2()">关闭菜单</button>
+					</p>
+             <div id="title-text">局内开启</div>
+           <script>		
+            document.body.addEventListener('touchstart', function () {});
+				    
+				setWindowDrag(0, 0, 0, 0);
+				
+				var iosScale = window.devicePixelRatio;
+				var sWidth = 0; 
+				var sHeight = 0; 
+				
+				var canvasDom = document.createElement("canvas");
+				document.body.appendChild(canvasDom);
+				canvasDom.style.height = "100%";
+				canvasDom.style.width = "100%";
+				
+				var layout = function()
+				{
+				
+				    if(window.lastorientation==window.orientation) return;
+				    window.lastorientation=window.orientation;
+				    
+				    if(Math.abs(window.orientation)==90) {
+				        setWindowRect(0,0,window.screen.height,window.screen.width);
+				        canvasDom.width = window.screen.height * iosScale;
+				        canvasDom.height = window.screen.width * iosScale;
+				        sWidth = window.screen.height;
+				        sHeight = window.screen.width;
+				    } else {
+				        setWindowRect(0,0,window.screen.width,window.screen.height);
+				        canvasDom.height = window.screen.height * iosScale;
+				        canvasDom.width = window.screen.width * iosScale;
+				        sWidth = window.screen.width;
+				        sHeight = window.screen.height;
+				    }
+				}
+				
+				layout();
+				window.addEventListener("orientationchange", layout, false);
+				
+				setButtonAction(function(){
+				        
+				     var menu = document.querySelector("#H5AlertView");
+				     if(menu.style.display=='none') {
+				         menu.style.display='block';
+				         setWindowTouch(true);
+				     } else {
+				         menu.style.display='none';
+				         setWindowTouch(false);
+				     }
+				});
+        </script>
+        <script>
+            function anniu1(valuess) {
+var X = h5gg.getRangesList('UnityFramework');
+    var jz2 = Number(X[0].start) + 0xF72D380;
+jz2 = Number(h5gg.getValue(jz2, 'I64')) + 0xB8;
+jz2 = Number(h5gg.getValue(jz2, 'I64')) + 0x60;
+jz2 = Number(h5gg.getValue(jz2, 'I64')) + 0x78;
+jz2 = Number(h5gg.getValue(jz2, 'I64')) + 0x20;
+                setInterval(function () {
+                                h5gg.setValue(jz2, valuess, 'F32');
+                            }, 0);
+ alert("修改成功");
+            }
+    function anniu2() {
+    var menu = document.querySelector("#H5AlertView");
+    menu.style.display='none';
+    }
+	function pid() {
+		  if(!h5gg.getProcList("smoba")[0]){alert("猫猫提示你先打开游戏");pid();}else{      
+	
+		  //获取进程pid      
+		  var name=h5gg.getProcList("smoba")[0].pid;
+		  //设置进程为修改目标
+		  h5gg.setTargetProc(name);			
+		  h5gg.clearResults();
+		}
+	}
+	pid()
+
+</script>
+</body>
+</html>
