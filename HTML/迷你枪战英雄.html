@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <style>
+        body,
+        html {
+            min-width: 100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            font: Arial 14px;
+        }
+    </style>
+    <!--<link rel="stylesheet" href="style.css"/>-->
+    <!--<script defer src="script.js"></script>-->
+</head>
+
+<body>
+    <title>GDweb</title>
+    <!--设置手机显示模式, 填满宽度,原尺寸显示,禁止双指缩放-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+    </script>
+    <div class="web_notice" style="
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: transparent;
+z-index: 99999;
+">
+
+        <head>
+            <script>
+                setButtonImage('');
+            </script>
+            <meta name="viewport" content="width=320, initial-scale=1">
+            <meta charset="utf-8">
+            <style>
+                body,
+                html {
+                    min-width: 100%;
+                    min-height: 100%;
+                    margin: 0;
+                    padding: 0;
+                    font-weight: 900;
+                    font-size: 12px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 2000;
+                }
+
+                .kq {
+                    width: 100px;
+                    height: 5px;
+                }
+
+                .kz {
+                    float: left;
+                    width: 500px;
+                    height: 5px;
+                }
+
+                .ciacx {
+                    width: 320px;
+                    height: 470px;
+                    border-radius: 40px;
+                    background: transparent;
+                    position: absolute;
+
+
+                }
+
+                .ciamenu1 {
+                    width: 100px;
+                    height: 20px;
+                    border-radius: 12px;
+                    background: #fff;
+                    position: relative;
+                    left: 15px;
+                    top: -5px;
+                }
+
+                .ciamain {
+                    width: 250px;
+                    height: 0px;
+                    border-radius: 15px;
+                    background: #fff;
+                    position: relative;
+                    left: 15px;
+                    top: 0px;
+                }
+
+                .lan1 {
+                    font-size: 19px;
+                    color: black;
+                    position: relative;
+                    left: 75px;
+                    top: -10px;
+                    font-weight: 600;
+                }
+
+                .lan0 {
+                    font-weight: 500;
+                    position: relative;
+                    font-size: 17px;
+                    top: 8px;
+                    left: 18px;
+
+                }
+
+                .ts {
+                    box-shadow: rgba(118, 118, 118, .44) 5px 5px 5px 5px;
+                    width: 150px;
+                    height: 40px;
+                    background: #fcfcff;
+                    position: relative;
+                    color: black;
+                    text-align: center;
+                    top: 200px;
+                    left: 70px;
+                    border-radius: 10px;
+                }
+
+                .tsz {
+                    font-size: 13px;
+                    top: 11px;
+                    position: relative;
+
+                }
+
+                .lan01 {
+                    font-weight: 500;
+                    position: relative;
+                    font-size: 17px;
+                    top: 5px;
+                    left: 18px;
+
+                }
+
+                .lan02 {
+                    font-weight: 500;
+                    position: relative;
+                    font-size: 17px;
+                    top: 10px;
+                    left: 18px;
+                }
+
+                .lan2 {
+                    font-size: 12.5px;
+                    position: relative;
+                    color: #2d5eff;
+                    left: 20px;
+                    top: -10px;
+                }
+
+                .lan28 {
+                    font-size: 12.5px;
+                    position: relative;
+                    color: #333bff;
+                    left: 20px;
+                    top: 19px;
+                }
+
+                .lan3 {
+                    font-size: 12.5px;
+                    position: relative;
+                    color: #aeaeae;
+                    left: 30px;
+                    top: -3px;
+                }
+
+                .zhuangt {
+                    font-size: 15px;
+                    position: relative;
+                    left: 85px;
+
+                }
+
+                .switch-btn {
+                    cursor: pointer;
+                    width: 50px;
+                    height: 30px;
+                    position: relative;
+                    top: 3px;
+                    right: 15px;
+                    border: 0px solid #dfdfdf;
+                    background-color: #e9e9e9;
+                    box-shadow: #dfdfdf 0 0 0 0 inset;
+                    border-radius: 15px;
+                    background-clip: content-box;
+                    display: inline-block;
+                    -webkit-appearance: none;
+                    user-select: none;
+                    outline: none;
+                    float: right;
+                }
+
+                .switch-btn:before {
+                    content: '';
+                    width: 26px;
+                    height: 26px;
+                    position: absolute;
+                    top: 2px;
+                    left: 2px;
+                    ;
+                    border-radius: 20px;
+                    background-color: grey;
+                    box-shadow: none;
+                    border: 0;
+                }
+
+                .switch-btn:checked {
+                    border-color: #52e24f;
+                    box-shadow: rgba(37,178,25,.3) 0 0 0 16px inset;
+                    background-color: #509d32;
+                }
+
+                .switch-btn:checked:before {
+                    left: 22px;
+                }
+
+                .switch-btn.switch-btn-animbg {
+                    transition: background-color ease .4s;
+                }
+
+                .switch-btn.switch-btn-animbg:before {
+                    transition: left .3s;
+                }
+
+                .switch-btn.switch-btn-animbg:checked {
+                    box-shadow: #dfdfdf 0 0 0 0 inset;
+                    background-color: black;
+                    transition: border-color .4s, background-color ease .4s;
+                }
+
+                .switch-btn.switch-btn-animbg:checked:before {
+                    transition: left .3s;
+                }
+
+                /* 滚动条整体部分 */
+
+                .scrollbar {
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    -webkit-overflow-scrolling: touch;
+                }
+
+                .scrollbar::-webkit-scrollbar {
+                    width: 0px;
+                    /* 纵向滚动条宽度 */
+                    height: 5px;
+                    /* 横向滚动条高度 */
+                    background-color: #f5f26f;
+                    /* 滚动条整体背景，一般被覆盖着 */
+                }
+
+                /* 滚动条的轨道（里面装有Thumb） */
+                .scrollbar::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(45, 45, 45, .41);
+                    /* 滚动条轨道阴影 */
+                    /*border-radius: 10px; /* 滚动条轨道圆角 */
+                    background-color: rgba(45, 45, 45, .41);
+                    /* 滚动条轨道背景 */
+                }
+
+                /* 滚动条里面的滑块 */
+                .scrollbar::-webkit-scrollbar-thumb {
+                    border-radius: 15px;
+                    /* 滚动条滑块圆角 */
+                    -webkit-box-shadow: inset 0 0 6px rgba(45, 45, 45, .41);
+                    /* 滚动条滑块阴影 */
+                    background-color: rgba(45, 45, 45, .41);
+                    /* 滚动条滑块颜色 */
+                }
+
+
+
+                /*菜单*/
+                *:not(input, checkbox, textarea) {
+                    /*禁止文本选择*/
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    user-select: none;
+                    /* Non-prefixed version, currently */
+                }
+            </style>
+        </head>
+
+        <body>
+
+            <div class=ciacx id="H5AlertView">
+                <div class="scrollbar" style="max-height:600px">
+                    <span class=lan1></span><br>
+                    <span class=lan1 style="text-shadow: 2px 2px 4px rgba(237,55,55,.81);"> iOS片少</span><br>
+                    <span class=lan2 style="text-shadow: 2px 2px 4px rgba(0,0,0,.81);">过搜索检测（断开网络开启两次）</span>
+                    <br>
+                    <label>
+                        <span class="lan0" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">搜索检测</span>
+<input class="switch-btn switch-btn animbg" type="checkbox" style="top: 5px;" onclick="cnm1()">
+                    </label>
+                    <br>
+
+                    <span class=lan28 style="text-shadow: 2px 2px 4px rgba(0,0,0,.66);">功能区</span>
+                    <br>
+                    <br>
+                    <label>
+                        <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">手雷秒炸</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px onclick="cnm2()">
+                    </label>
+                    <br>
+                    <br>
+                    <label>
+                        <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">重置手雷</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px onclick="cnm3()">
+                    </label>
+                    <br>
+                    <br>
+                    <label>
+                        <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">开启加速</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px onclick="cnm4()">
+                    </label>
+                    <br>
+                    <br>
+                    <label>
+                        <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">视野降低</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px onclick="cnm6()">
+                    </label>
+                    <br>
+                    <br>
+                    <label>
+                        <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">蓝点复活</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px onclick="cnm7()">
+                    </label>
+                    <br>
+                    <br>
+                    <label>
+                        <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">红点复活</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px onclick="cnm8()">
+                    </label>
+                    <br>
+                    <br>
+                    <label>
+                        <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">35无限子弹</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px onclick="cnm9()">
+                    </label>
+                    <br>
+                    <br>
+                    <label>
+                        <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">火神</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px onclick="cnm10()">
+                    </label>
+                    <br>
+                    <br>
+                    <label>
+                        <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">偏移火神范围</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px onclick="cnm11()">  
+                      
+                    </label>
+                    <br>
+                    <br>
+                    <label>
+                        <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">全改火神范围</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px
+onclick="cnm13()">  
+                    </label>    
+                    <br>  
+                    <br>  
+                    <label>
+                      <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">自瞄</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px
+onclick="cnm12()">
+                  </label>  
+                   <br>
+                   <br>
+                   <label>
+                      <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">人物加速</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px
+onclick="cnm14()">
+                  </label>
+                  <br>  
+                    <br>  
+                    <label>
+                      <span class=lan02 style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">人物高跳</span>
+                        <input class="switch-btn switch-btn animbg" type="checkbox" style=top:5px
+onclick="cnm5()">
+                  </label>
+                  
+                 </div>
+                <script>
+
+                    //竖屏
+                    var sWidth = window.screen.width; //屏幕宽
+                    var sHeight = window.screen.height; //屏幕高
+
+                    //全屏显示
+                    if (window.screen.availWidth >
+
+
+
+                        window.screen.availHeight) {
+                        //横屏，宽高置换
+                        sWidth = window.screen.height; //屏幕宽
+                        sHeight = window.screen.width; //屏幕高
+                    }
+                    setWindowRect(0, 0, sWidth, sHeight);
+
+
+                    setButtonAction(function () {
+
+                        var menu = document.querySelector("#H5AlertView");
+                        if (menu.style.display == 'none') {
+                            menu.style.display = 'block';
+                            //隐藏菜单之后, 设置触控穿透悬浮窗口
+                            setWindowTouch(true);
+                        } else {
+                            menu.style.display = 'none';
+                            //显示菜单之后, 设置触控不可穿透悬浮窗口
+                            setWindowTouch(false);
+                        }
+                    });
+
+                </script>
+                <script>
+
+                    function cnm1() {
+                        h5gg.clearResults(); //清空搜索结果 
+                        h5gg.searchNumber('1', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.searchNumber('2', 'F32', '0x0', '0x200000000');
+                        h5gg.clearResults(); //清空搜索结果 
+                        alert("过检测")
+                    }
+
+                    function cnm2() {
+                        h5gg.searchNumber("4.166667", 'F32', '0x0', '0x300000000');
+                        xyzCount = h5gg.getResultsCount();
+                        xyzResults = h5gg.getResults(xyzCount);
+
+                        for (var i = 0; i < xyzCount; i++) {
+                            var xyz = xyzResults[i].address;
+                            var y = Number(xyz) + 76;
+                            h5gg.setValue(y, 0.5, 'F32');
+                        }
+                        setTimeout("cnm2()", 1);
+                    }
+
+                    function cnm3() {
+
+                        h5gg.clearResults(); //清空搜索结果 
+                    }
+
+                    function cnm4() {
+                        h5gg.clearResults(); //清空搜索结果
+                        h5gg.searchNumber("1.28", 'F32', '0x0', '0x300000000');
+                        h5gg.searchNearby("1", 'F32', '0x68'); //临近数值，类型，临近范围
+                        h5gg.searchNearby("7.84727e-44", 'F32', '0x68'); //临近数值，类型，临近范围
+                        h5gg.searchNumber("1", 'F32', '0x0', '0x300000000');
+                        h5gg.editAll('3', 'F32');
+                    }
+
+                    function cnm5() {
+                        h5gg.clearResults(); //清空搜索结果
+                        h5gg.searchNumber("1.28", 'F32', '0x0', '0x300000000');
+                        h5gg.searchNearby("3", 'F32', '0x68'); //临近数值，类型，临近范围
+                        h5gg.searchNearby("7.84727e-44", 'F32', '0x68'); //临近数值，类型，临近范围
+                        h5gg.searchNumber("3", 'F32', '0x0', '0x300000000');
+                        h5gg.editAll('1', 'F32');
+                    }
+
+                    function cnm6() {
+                        h5gg.clearResults(); //清空搜索结果
+                        h5gg.searchNumber("1.28", 'F32', '0x0', '0x300000000');
+                        h5gg.searchNearby("3", 'F32', '0x68'); //临近数值，类型，临近范围
+                        h5gg.searchNearby("7.84727e-44", 'F32', '0x68'); //临近数值，类型，临近范围
+                        h5gg.searchNumber("1.28", 'F32', '0x0', '0x300000000');
+                        h5gg.editAll('0.7', 'F32');
+                    }
+
+                    function cnm7() {
+
+                        h5gg.clearResults(); //清空搜索结果
+                        h5gg.searchNumber("16842756", 'I32', '0x0', '0x300000000');
+                        h5gg.searchNearby("1061997773", 'I32', '0x100'); //临近数值，类型，临近范围
+                        h5gg.searchNumber("16842756", 'I32', '0x0', '0x300000000');
+                        xyzCount = h5gg.getResultsCount();
+                        xyzResults = h5gg.getResults(xyzCount);
+
+                        for (var i = 0; i < xyzCount; i++) {
+                            var xyz = xyzResults[i].address;
+                            var y = Number(xyz) + -84;
+                            var z = Number(xyz) + -76;
+                            var x = Number(xyz) + -68;
+                            h5gg.setValue(y, -2.55, 'F32');
+                            h5gg.setValue(z, 2.31, 'F32');
+                            h5gg.setValue(x, 3.11, 'F32');
+                        }
+                    }
+
+                    function cnm8() {
+                        h5gg.clearResults(); //清空搜索结果
+                        h5gg.searchNumber("16842756", 'I32', '0x0', '0x300000000');
+                        h5gg.searchNearby("1061997773", 'I32', '0x100'); //临近数值，类型，临近范围
+                        h5gg.searchNumber("16842756", 'I32', '0x0', '0x300000000');
+                        xyzCount = h5gg.getResultsCount();
+                        xyzResults = h5gg.getResults(xyzCount);
+
+                        for (var i = 0; i < xyzCount; i++) {
+                            var xyz = xyzResults[i].address;
+                            var y = Number(xyz) + -84;
+                            var z = Number(xyz) + -76;
+                            var x = Number(xyz) + -68;
+                            h5gg.setValue(y, 1.91, 'F32');
+                            h5gg.setValue(z, 1.99, 'F32');
+                            h5gg.setValue(x, -3.24, 'F32');
+
+                        }
+                    }
+
+                    function cnm9() {
+                        h5gg.clearResults(); //清空搜索结果
+                        h5gg.searchNumber("35", 'I32', '0x0', '0x300000000');
+                        h5gg.searchNearby("140", 'I32', '0x100'); //临近数值，类型，临近范围
+                        alert("请开一枪再点确认");
+                        h5gg.searchNumber("34", 'I32', '0x0', '0x300000000');
+                        h5gg.editAll('9999999', 'I32');
+                        alert("修改完成");
+                    }
+                  
+                    function cnm10() {
+                        h5gg.clearResults(); //清空搜索结果
+                        h5gg.searchNumber("10401001", 'I32', '0x100000000', '0x200000000');
+                        h5gg.searchNearby("16777216", 'I32', '0x20'); //临近数值，类型，临近范围
+                        h5gg.searchNumber("10401001", 'I32', '0x0', '0x200000000');
+                      h5gg.editAll('10401013', 'I32');    
+                      alert("修改完成")//修改搜索结果中的全部数值(清除结果后不能调用),返回修改成功个数
+                        
+                      
+                      }
+                      
+                      function cnm11() {
+                        h5gg.clearResults(); //清空搜索结果
+                        h5gg.searchNumber("8000", 'I32', '0x100000000', '0x200000000');
+                        h5gg.searchNearby("4", 'I32', '0x40'); //临近数值，类型，临近范围
+                        h5gg.searchNearby("8", 'I32', '0x40'); //临近数值，类型，临近范围
+                        h5gg.searchNearby("350", 'I32', '0x40'); //临近数值，类型，临近范围
+                        h5gg.searchNearby("10401013", 'I32', '0x40'); //临近数值，类型，临近范围
+                        h5gg.searchNumber("10401013", 'I32', '0x100000000', '0x200000000');
+    r2Count = h5gg.getResultsCount();
+    r2Results = h5gg.getResults(r2Count);
+    h5gg.clearResults();
+    for (var i = 0; i < r2Count; i++) {
+      var kill = Number(r2Results[i].address) - 68;
+      h5gg.setValue(kill, '999999', 'I32');
+
+      var kill = Number(r2Results[i].address) - 108;
+      h5gg.setValue(kill, '949826', 'I32');
+  
+      var kill = Number(r2Results[i].address) - 104;
+      h5gg.setValue(kill, '9999999999', 'I32');
+      
+      var kill = Number(r2Results[i].address) - 64;
+      h5gg.setValue(kill, '999999', 'I32');
+
+      var kill = Number(r2Results[i].address) - 104;
+      h5gg.setValue(kill, '949826', 'I32');
+  
+      var kill = Number(r2Results[i].address) - 100;
+      h5gg.setValue(kill, '9999999999', 'I32');
+
+    }
+  }
+                 
+                        
+
+                        function cnm12() {
+                         h5gg.clearResults(); //清空搜索结果
+                         h5gg.searchNumber("4097", 'I32', '0x0', '0x200000000');
+                         h5gg.searchNearby("200", 'F32', '0x100'); //临近数值，类型，临近范围
+    h5gg.searchNearby("2", 'F32', '0x100'); //临近数值，类型，临近范围
+    h5gg.searchNumber("2", 'F32', '0x0', '0x200000000');
+    h5gg.getResults('1', 'F32');
+    r3Count = h5gg.getResultsCount();
+    r3Results = h5gg.getResults(r3Count);
+    h5gg.clearResults();
+    if (r3Count > 0) {
+      var aim = Number(r3Results[0].address) + 0;
+      h5gg.setValue(aim, '1.4', 'F32');
+      aim = Number(r3Results[0].address) + 8;
+      h5gg.setValue(aim, '30', 'F32');
+      aim = Number(r3Results[0].address) + 64;
+      h5gg.setValue(aim, '2.1', 'F32');
+    }
+  }
+                        
+                        
+                   function cnm13() {                                                                               
+h5gg.clearResults(); //清空搜索结果                        
+h5gg.searchNumber('8000', 'I32', '0x100000000', '0x200000000'); 
+h5gg.searchNearby('4', 'I32', '0x100');  
+h5gg.searchNearby('8', 'I32', '0x100');
+h5gg.searchNearby('10401013', 'I32', '0x100');  
+h5gg.searchNearby('4', 'I32', '0x100'); 
+h5gg.searchNearby('8', 'I32', '0x100');                      
+h5gg.searchNearby('8000', 'I32', '0x100'); 
+h5gg.editAll('949826', 'I32');                     
+            
+                   }             
+                     
+                   function cnm14() {
+                     h5gg.clearResults(); //清空搜索
+                     h5gg.searchNumber('2','F32','0x100000000','0x200000000');
+                     h5gg.searchNearby('7','F32','0x5');
+                     h5gg.searchNumber('7','F32','0x100000000','0x200000000');
+                     h5gg.editAll('25','F32');
+                     h5gg.clearResults();
+                     h5gg.searchNumber('0.85','F32','0x100000000','0x200000000');
+                     h5gg.searchNearby('0.65','F32','0x2');
+                     h5gg.searchNumber('0.65','F32','0x100000000','0x200000000');
+                     h5gg.editAll('7','F32');
+                    function cnm5() {
+                      h5gg.clearResults();
+                      h5gg.searchNumber('1.4013e-45','F32','0x100000000','0x200000000');
+                      h5gg.searchNearby('80','F32','0x10');
+                      h5gg.searchMearby('1','F32','0x8');
+                      h5gg.searchNumber('1','F32','0x100000000','0x200000000');
+                      h5gg.editAll('9','F32');
+                      
+                    }
+                     
+                   }
+              </script>
+                <div id="content-view">
+                    <div id="info-text"></div>
+
+              
+            
+
+      
+
+        </body>
+<html>
+</html>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-     scale=1.0">
+
+    <title>点击头像播放音乐</title>
+
+</head>
+
+<style>
+    #btn {
+      width: 60px;
+height: 60px;
+background: url("https://imgos.cn/2024/08/16/66bee8d2dd187.jpeg") no-repeat;
+background-size: 60% 60%;
+-webkit-background-size: 100% 100%;
+-moz-background-size: 100% 100%;
+-ms-background-size: 100% 100%;
+-o-background-size: 100% 100%;
+border-radius: 35px; /* 添加了圆角 */
+box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5); /* 添加了阴影 */
+position: fixed;
+top: 2.1866666666666665rem;
+right: 0.22rem;
+z-index: 7777; /* 修正了属性名，应为 'z-index' 而不是 'z-GB' */
+    }
+</style>
+
+<body>
+
+    <div id="btn">
+
+        <audio id="audio-player" ref="audio" preload="preload" autoplay="autoplay" loop="loop">
+
+            <source src="http://music.163.com/song/media/outer/url?id=1377530437.mp3" type="audio/mpeg">
+
+            Your browser does not support the audio tag.
+
+        </audio>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    let isWeixin = () => {
+
+        let ua = window.navigator.userAgent.toLowerCase()
+
+        return;
+
+        /micromessenger/
+
+            .test(ua)
+
+    }
+
+    // method 自动播放
+
+    let audioPlayer = (id) => {
+
+        let audio = document.getElementById(id)
+
+        if (isWeixin()) {
+
+            document.addEventListener(
+
+                'WeixinJSBridgeReady'
+
+                , () => {
+
+                    audio.play()
+
+                }, false);
+
+            // 添加 getNetworkType 的判断原因, 请看问题分析2
+
+            if (typeof window.
+
+                WeixinJSBridge
+
+                ==
+
+                "object"
+
+                && typeof window.
+
+                    WeixinJSBridge
+
+                    .invoke ==
+
+                "function"
+
+            ) {
+
+                window.
+
+                    WeixinJSBridge
+
+                    .invoke(
+
+                        'getNetworkType'
+
+                        , {}, () => {
+
+                            audio.play()
+
+                        })
+
+            }
+
+        } else {
+
+            // audio.play();
+
+            let touchPlay = () => {
+
+                audio.play();
+
+                document.removeEventListener(
+
+                    'touchstart'
+
+                    , touchPlay, false)
+
+            };
+
+            if (audio.paused) {
+
+                document.addEventListener(
+
+                    'touchstart'
+
+                    , touchPlay, false)
+
+            }
+
+        }
+
+    }
+
+    // 使用
+
+    audioPlayer(
+
+        'audio-player'
+
+    );
+
+    var audio = document.getElementById("audio-player");
+
+    var btn = document.getElementById("btn");
+
+    var rotateVal = 0;
+
+    var InterVal;     // 定时器
+
+    // 设置定时器
+
+    function rotate() {
+
+        InterVal = setInterval(function () {
+
+            rotateVal += 4;
+
+            // 设置旋转属性(顺时针)
+
+            btn.style.transform = 'rotate(' + rotateVal + 'deg)';
+
+            // 设置旋转属性(逆时针)
+
+            //img.style.transform = 'rotate(-' + rotateVal + 'deg)'
+
+            // 设置旋转时的动画  匀速10.1s
+
+            btn.style.transition = '10.1s linear'
+
+        }, 100)
+
+    }
+
+    // rotate();
+
+    btn.onclick = function () {         //点击按钮播放停止
+
+        if (audio.paused) { //判断当前的状态是否为暂停，若是则点击播放，否则暂停
+
+            audio.play();
+
+            rotate()
+
+        } else {
+
+            audio.pause();
+
+            clearInterval(InterVal)
+
+        }
+
+    };
+
+</script>
+
+</html>
