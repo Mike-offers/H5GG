@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /*背景*/
+  .white-background {
+      background-color: rgba(0, 0, 0, 0.0);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-size: 350px 250px;
+    }
+
+    /*画布*/
+  .ink-canvas {
+      position: relative;
+      width: 350px;
+      height: 250px;
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /*线条 横*/
+  .ink-canvas::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: 0px;
+      right: 0px;
+      height: 1px;
+      background-color: black;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /*线条 竖*/
+  .ink-canvas::after {
+      content: "";
+      position: absolute;
+      left: 90px;
+      top: 60px;
+      bottom: 0px;
+      width: 1px;
+      background-color: black;
+      box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /*文字*/
+  .lan1 {
+      font-size: 30px;
+      position: relative;
+      left: 120px;
+      top: 0px;
+      background: linear-gradient(199deg, #b9b9b9 20.0%, #7f7f7f 80.0%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* 左侧内部画布 */
+  .inner-canvas {
+      width: 90px;
+            height:189px;
+            overflow-y: auto;
+      background-color: transparent;
+      position: absolute;
+      top: 61px;
+      left: 0px;
+      border-bottom-left-radius: 20px;     
+      box-sizing: border-box; /* 确保内边距和边框不会增加元素的总宽度和高度 */
+    }
+        
+            
+
+    /* 右边侧内部画布 */
+  .inner-canvas2 {
+      width: 259px;
+      height: 189px;
+        overflow-y: auto;
+      background-color: transparent;
+      position: absolute;
+      top: 61px;
+      left: 91px;
+      border-radius: 0 0 20px 0;
+            box-sizing: border-box; 
+    }
+
+    /*顶部头像*/
+    #whiteButton {
+      padding: 22.5px 22.5px;
+      position: relative;
+      top: 0px;
+      left: -100px;
+      border: none;
+      background-color: transparent;
+      color: transparent;
+      cursor: pointer;
+      background-size: cover;
+      border-radius: 35px;
+      border: 1px solid black;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    /*关闭按钮*/
+  .gban {
+      position: relative;
+      padding: 5px 10px;
+      background-color: white;
+      color: black;
+      border-radius: 7.5px;
+      left: 120px;
+      top: 0px;
+      border: 1px solid black;
+    }
+
+    /* 主按钮 */
+  .button-common {
+      position: relative;
+      padding: 9px 9px;
+      background-color: white;
+      color: black;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 1px solid black;          
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+  .button {
+      left: 6px;
+      top: 8px;
+    }
+
+  .button2 {
+      left: 6px;
+      top: 13px;
+    }
+
+  .button3 {
+      left: 6px;
+      top: 18px;
+    }
+        .button4 {
+      left: 6px;
+      top: 23px;
+    }
+
+  .button5 {
+      left: 6px;
+      top: 28px;
+    }
+
+
+
+    /* 隐藏按钮1（基础按钮对应的隐藏按钮）*/
+  .hidden-button-base {
+      display: none;
+      position: relative;
+      padding: 10px 20px;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+  .hidden-button {
+      left: 130px;
+      top: 13px;
+    }
+
+  .hidden-button2 {
+      left: 130px;
+      top: 25px;
+    }
+
+  .hidden-button3 {
+      left: 130px;
+      top: 38px;
+    }
+
+  .hidden-button4 {
+      left: 130px;
+      top: 13px;
+    }
+
+  .hidden-button5 {
+      left: 130px;
+      top: 25px;
+    }
+
+  .hidden-button6 {
+      left: 130px;
+      top: 38px;
+    }
+
+    /*取消锁定按钮（基础按钮对应的取消锁定按钮）*/
+  .chuwn-nio {
+      display: none;
+      position: relative;
+      padding: 10px 5px;
+      background-color: white;
+      color: black;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 1px solid black;
+    }
+
+  .chuwn {
+      left: 30px;
+      top: -101px;
+
+padding: 10px 19px;
+
+    }
+
+  .chuwn2 {
+      left: 30px;
+      top: -89px;
+
+padding: 10px 19px;
+
+    }
+
+  .chuwn3 {
+      left: 30px;
+      top: -76px;
+            padding: 10px 19px;
+    }
+
+    /*公告文字*/
+  .hidden-text {
+      display: none;
+      position: relative;
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      left: 30px;
+      top: 50px;
+    }
+
+    /* 娱乐按钮对应的隐藏按钮容器样式 */
+  .nmbbutton-base {
+      display: none;
+      position: relative;
+      padding: 10px 30px;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+  .nmbbutton1 {
+      left: 10px;
+      top: 10px;
+
+padding: 10px 19px;
+
+    }
+
+  .nmbbutton2 {
+      left: 10px;
+      top: 20px;
+            padding: 10px 17px;
+    }
+
+  .nmbbutton3 {
+      left: 10px;
+      top: 30px;
+            padding: 10px 23px;
+        }
+   .nmbbutton4 {
+      left: 10px;
+      top: 40px;    
+            padding: 10px 10px;
+    }
+        .nmbbutton5 {
+      left: 10px;
+      top: 50px;
+            padding: 10px 12px;
+        }
+        .nmbbutton6 {
+      left: 10px;
+      top: 60px;
+            padding: 10px 19px;
+        }
+        .nmbbutton7 {
+      left: 10px;
+      top: 70px;
+            padding: 10px 19px;
+        }
+        .nmbbutton8 {
+      left: 10px;
+      top: 80px;
+            padding: 10px 19px;
+        }
+
+  </style>
+</head>
+
+<body>
+  <div class="white-background">
+        <!-- 主画布内容 -->
+    <div class="ink-canvas">
+        <span class="lan1">iOSNiNG</span>
+ <button id="whiteButton"></button>
+ <button class="gban" onclick="u1()">关闭</button>
+     
+
+            
+            <!-- 画布1内容 -->
+      <div class="inner-canvas">
+        <button class="button-common button">基础功能</button>
+        <button class="button-common button2">公告功能</button>
+        <button class="button-common button3">娱乐功能</button>
+                <button class="button-common button4">传送功能</button>
+                <button class="button-common button5">衣柜功能</button>
+      </div>
+    <!-- 画布2内容 -->
+      <div class="inner-canvas2">
+        <button class="hidden-button-base hidden-button" onclick="anniu1()">无限能量</button>
+        <button class="hidden-button-base hidden-button2" onclick="anniu2()">全局加速</button>
+        <button class="hidden-button-base hidden-button3" onclick="anniu3()">自然炸花</button>
+
+    <button class="hidden-button-base hidden-button4" onclick="anniu1()">无限能量</button>
+        <button class="hidden-button-base hidden-button5" onclick="anniu2()">全局加速</button>
+        <button class="hidden-button-base hidden-button6" onclick="anniu3()">自然炸花</button>
+
+
+
+        <button class="chuwn-nio chuwn" onclick="a1()">取消锁定</button>
+        <button class="chuwn-nio chuwn2" onclick="a2()">关闭加速</button>
+        <button class="chuwn-nio chuwn3" onclick="a3()">无敌吸火</button>
+              <div class="hidden-text">仅供学习参考 请勿非法用途
+
+
+                   
+
+</div>
+
+        <!-- 娱乐按钮对应的隐藏按钮 -->
+        <button class="nmbbutton-base nmbbutton1"onclick="b1()">一飞冲天</button>
+        <button class="nmbbutton-base nmbbutton2"onclick="b2()">无人机</button>
+        <button class="nmbbutton-base nmbbutton3"onclick="b3()" >跳     远</button>
+                <button class="nmbbutton-base nmbbutton4"onclick="b4()">无限烟花</button>
+                <button class="nmbbutton-base nmbbutton5"onclick="b5()">亮度修改</button>
+                <button class="nmbbutton-base nmbbutton6"onclick="b6()">风速修改</button>
+                <button class="nmbbutton-base nmbbutton7"onclick="b6()">自定义小金人数量</button>
+                <button class="nmbbutton-base nmbbutton8"onclick="b6()">还没写</button>
+      </div>
+      <div>
+        
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const mainButton = document.querySelector('.button');
+    const hiddenButton = document.querySelector('.hidden-button');
+    const hiddenButton2 = document.querySelector('.hidden-button2');
+    const hiddenButton3 = document.querySelector('.hidden-button3');
+    const chuwn = document.querySelector('.chuwn');
+    const chuwn2 = document.querySelector('.chuwn2');
+    const chuwn3 = document.querySelector('.chuwn3');
+
+    const entertainmentButton = document.querySelector('.button3');
+    const announcementButton = document.querySelector('.button2');
+    const hiddenText = document.querySelector('.hidden-text');
+
+    // 基础按钮点击事件
+    mainButton.addEventListener('click', function () {
+      toggleHiddenButtons(hiddenButton, hiddenButton2, hiddenButton3, chuwn, chuwn2, chuwn3, true);
+      toggleHiddenText(hiddenText, false);
+      toggleEntertainmentHiddenButtons(false);
+    });
+
+    // 公告按钮点击事件
+    announcementButton.addEventListener('click', function () {
+      toggleHiddenButtons(hiddenButton, hiddenButton2, hiddenButton3, chuwn, chuwn2, chuwn3, false);
+      toggleHiddenText(hiddenText, true);
+      toggleEntertainmentHiddenButtons(false);
+    });
+
+    // 娱乐按钮点击事件
+    entertainmentButton.addEventListener('click', function () {
+      const entertainmentHiddenButtons = document.querySelectorAll('.nmbbutton-base');
+      const areEntertainmentHidden = entertainmentHiddenButtons[0].style.display === 'none';
+      toggleEntertainmentHiddenButtons(areEntertainmentHidden);
+      toggleHiddenButtons(hiddenButton, hiddenButton2, hiddenButton3, chuwn, chuwn2, chuwn3, false);
+      toggleHiddenText(hiddenText, false);
+    });
+
+    // 辅助函数：切换基础按钮对应的隐藏按钮和取消锁定按钮的显示状态
+    function toggleHiddenButtons(button1, button2, button3, chuwn1, chuwn2, chuwn3, show) {
+      button1.style.display = show? 'block' : 'none';
+      button2.style.display = show? 'block' : 'none';
+      button3.style.display = show? 'block' : 'none';
+      chuwn1.style.display = show? 'block' : 'none';
+      chuwn2.style.display = show? 'block' : 'none';
+      chuwn3.style.display = show? 'block' : 'none';
+    }
+
+    // 辅助函数：切换公告隐藏文本的显示状态
+    function toggleHiddenText(textElement, show) {
+      textElement.style.display = show? 'block' : 'none';
+    }
+
+    // 辅助函数：切换娱乐按钮对应的隐藏按钮的显示状态
+    function toggleEntertainmentHiddenButtons(show) {
+      const entertainmentHiddenButtons = document.querySelectorAll('.nmbbutton-base');
+      entertainmentHiddenButtons.forEach(button => {
+        button.style.display = show? 'block' : 'none';
+      });
+    }
+  </script>
+  </body>
+  <script>
+        
+        
+    /*无限能量*/
+         var intervalId;
+    var X = h5gg.getRangesList('Sky-iOS-Gold');
+            function anniu1() {
+    var jz2 = Number(X[0].start) + 0x3673060;
+jz2 = Number(h5gg.getValue(jz2, 'I64')) + 0x10E0;
+jz2 = Number(h5gg.getValue(jz2, 'I64')) + 0x330;
+jz2 = Number(h5gg.getValue(jz2, 'I64')) + 0x47C0;
+     intervalId = setInterval(function () {
+       h5gg.setValue(jz2, 99, 'F32');
+                }, 0);
+            }
+
+    function a1() {
+      if (intervalId!== undefined) {
+        clearInterval(intervalId);
+        intervalId = undefined;
+      }
+    }
+
+    /*关闭按钮*/
+    function u1() {
+      var menu = document.querySelector(".ink-canvas");
+      menu.style.display = 'none';
+    }
+
+    /*全局加速*/
+    var X = h5gg.getRangesList('Sky-iOS-Gold');
+    var autoUpdateId;
+    function anniu2() {
+    var jz2 = Number(X[0].start) + 0x4506880;
+jz2 = Number(h5gg.getValue(jz2, 'I64')) + 0xC8;
+  autoUpdateId =
+    setInterval(function () {
+      h5gg.setValue(jz2, 4, 'F32');
+               }, 0.01);
+            }
+
+    function a2() {
+     if (autoUpdateId!== undefined) {
+        clearInterval(autoUpdateId);
+        autoUpdateId = undefined;
+        alert('切一下后台');
+      }
+    }
+        function a3() {
+  alert("请耐心等待响应");
+  h5gg.clearResults();
+  h5gg.searchNumber("3.5", "F32", "0x110000000", "0x2000000000");
+  h5gg.searchNearby("-1", "F32", "0x60");
+  h5gg.searchNumber("3.5", "F32", "0x00000000", "0x2000000000");
+  h5gg.editAll("1000000000", "F32");
+  alert("已吸取火蜡");
+}
+                /*跳远*/
+      function b3() {
+                alert("跳远");
+  h5gg.clearResults();
+  h5gg.searchNumber("1.275", "F32", "0x100000000", "0x2000000000");
+  h5gg.searchNearby("1", "F32", "0x60");
+  h5gg.searchNumber("1", "F32", "0x100000000", "0x2000000000");
+  h5gg.editAll("40", "F32");
+    alert("跳远");
+    }
+    
+        function anniu3() {
+            alert("自燃炸花");
+    h5gg.clearResults();
+  h5gg.searchNumber("3", "I32", "0x100000000", "0x2000000000");
+  h5gg.searchNearby("300", "F32", "0x500");
+    h5gg.searchNearby("1", "F32", "0x500");
+  h5gg.searchNumber("1", "F32", "0x100000000", "0x2000000000");
+  h5gg.editAll("0.007874016", "F32");
+    alert("开启");
+    }
+            
+  </script>
+</html>
+</body>
+</html>
